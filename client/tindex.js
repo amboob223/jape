@@ -6,7 +6,8 @@ const originn = document.getElementById("origin");
 const destination = document.getElementById("destination");
 const image = document.getElementById("image");
 const button = document.getElementById("btn");
-
+const tbody = document.querySelector("tbody")
+const getusers = document.getElementById("getusers")
 
 //travlerbtn
 button.addEventListener("click", async (event) => {
@@ -30,4 +31,46 @@ button.addEventListener("click", async (event) => {
         console.log(error)
     }
 
+})
+
+// the get
+getusers.addEventListener("click", async (event) => {
+
+    try {
+        event.preventDefault();
+        const data = await fetch("http://localhost:5000/users");
+        const par = await data.json(); // this give us a json object but we got to dod the 
+        const info = par.rows
+
+        info.map((info) => {
+            //make the elements
+            const row = document.createElement("tr");
+            const name = document.createElement("td");
+            const phone = document.createElement("td");
+            const email = document.createElement("td");
+            const origin = document.createElement("td");
+            const destination = document.createElement("td");
+
+            //populate the elements
+            name.innerHTML = info.name
+            phone.innerHTML = info.phone
+            email.innerHTML = info.email
+            origin.innerHTML = info.origin
+            destination.innerHTML = info.destination
+
+            //append to the rows
+            row.appendChild(name)
+            row.appendChild(phone)
+            row.appendChild(email)
+            row.appendChild(origin)
+            row.appendChild(destination)
+
+            // then the tbody is populated with the row wwe pop above
+            tbody.appendChild(row)
+            //
+            console.log("work")
+        })
+    } catch (error) {
+        console.log(error)
+    }
 })

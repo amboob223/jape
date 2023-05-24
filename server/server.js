@@ -56,6 +56,33 @@ app.post("/users", upload.single("uimage"), async (req, res) => {
     } catch (error) {
         console.log(error)
     }
+});
+
+//get for travelers an users 
+app.get("/travelers", async (req, res) => {
+
+    try {
+        const data = await pool.query(
+            "SELECT * FROM travelers;"
+        );
+        res.json(data)
+    } catch (error) {
+        console.log(error)
+    }
+});
+
+app.get("/users", async (req, res) => {
+
+
+    try {
+        const data = await pool.query(
+            "SELECT * FROM users;"
+        )
+        res.json(data)//the res is the response from the server to the browser based of the browsers req
+
+    } catch (error) {
+        console.log(error)
+    }
 })
 
 

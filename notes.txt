@@ -2,4 +2,9 @@
 // from there we will have th diffrent forms connecting and make delte routes too
 // for it to work we need to make the action on the forms 
 //be consistent with th name in the element and single(upload)
-we got to give each form its own js file we got to sepereat et them 
+we got to give each form its own js file we got to sepereat et them '
+
+//today
+    - design the background
+    -put the show together 
+    - go to legitmation 

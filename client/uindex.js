@@ -29,6 +29,13 @@ ubutton.addEventListener("click", async (event) => {
                 body: body
             })
 
+        uname.value = ""
+        uphone.value = ""
+        uemail.value = ""
+        uorigin.value = ""
+        udestinaton.value = ""
+
+
         console.log("workk")
     } catch (error) {
         console.log(error)
@@ -40,6 +47,14 @@ gettrav.addEventListener("click", async (event) => {
 
     try {
         event.preventDefault();
+        const table = document.querySelector("table")
+        table.style.display = "table-row-group"
+        //wipe up the row 
+        tbody.innerHTML = ""
+
+        //this pops up the column infor when the button is clicked 
+
+
         const data = await fetch("http://localhost:5000/travelers");
         const par = await data.json(); // this give us a json object but we got to dod the 
         const info = par.rows
@@ -47,6 +62,7 @@ gettrav.addEventListener("click", async (event) => {
         info.map((info) => {
             //make the elements
             const row = document.createElement("tr");
+
             const name = document.createElement("td");
             const phone = document.createElement("td");
             const email = document.createElement("td");

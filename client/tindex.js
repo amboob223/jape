@@ -26,6 +26,14 @@ button.addEventListener("click", async (event) => {
             method: "POST",
             body: body
         })
+
+        //now we wipe the form clean
+        namee.value = ""
+        phone.value = ""
+        email.value = ""
+        originn.value = ""
+        destination.value = ""
+
         console.log("work")
     } catch (error) {
         console.log(error)
@@ -38,6 +46,11 @@ getusers.addEventListener("click", async (event) => {
 
     try {
         event.preventDefault();
+        //this is so nothing displays till i say 
+        const table = document.querySelector("table")
+        table.style.display = "table-row-group" // style and display node 
+
+        tbody.innerHTML = ""
         const data = await fetch("http://localhost:5000/users");
         const par = await data.json(); // this give us a json object but we got to dod the 
         const info = par.rows

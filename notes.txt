@@ -5,6 +5,9 @@
 we got to give each form its own js file we got to sepereat et them '
 
 //today
-    - design the background
+    - design the background - flip the colors and the buttons and give a logo 
+        -add section for dates and bags/weight 
+        - add a delete button or a timed fuction where it deletes after the date
     -put the show together 
     - go to legitmation 
+

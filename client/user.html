@@ -12,103 +12,105 @@
 </head>
 
 <body>
+    <div class="w">
 
-    <header>
-        <ul class="nav justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link active" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="travelers.html">Travelers</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="user.html">Users</a>
-            </li>
-        </ul>
-    </header>
-    <main>
-        <div class="mainc">
-            <div class="subc">
+        <header>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="travelers.html">Travelers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="user.html">Users</a>
+                </li>
+            </ul>
+        </header>
+        <main>
+            <div class="mainc">
+                <div class="subc">
 
 
-                <h1>BE A USER</h1>
-                <form action="http://localhost:5000/users" enctype="multipart/form-data">
-                    <div class="form-group row">
-                        <label for="uname" class="col-sm-2 col-form-label">name</label>
-                        <div class="col-sm-10">
-                            <input type="text" id="uname" name="uname">
+                    <h1>BE A USER</h1>
+                    <form action="http://localhost:5000/users" enctype="multipart/form-data">
+                        <div class="form-group row">
+                            <label for="uname" class="col-sm-2 col-form-label">name</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="uname" name="uname">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="uphone" class="col-sm-2 col-form-label">Phone</label>
-                        <div class="col-sm-10">
-                            <input type="text" id="uphone" name="uphone">
+                        <div class="form-group row">
+                            <label for="uphone" class="col-sm-2 col-form-label">Phone</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="uphone" name="uphone">
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-group row">
-                        <label for="uemail" class="col-sm-2 col-form-label">Email</label>
-                        <div class="col-sm-10">
-                            <input type="text" id="uemail" name="uemail">
+                        <div class="form-group row">
+                            <label for="uemail" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="uemail" name="uemail">
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-group row">
-                        <label for="uorigin" class="col-sm-2 col-form-label">origin</label>
-                        <div class="col-sm-10">
-                            <input type="text" id="uorigin" name="uorigin">
+                        <div class="form-group row">
+                            <label for="uorigin" class="col-sm-2 col-form-label">origin</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="uorigin" name="uorigin">
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-group row">
-                        <label for="udestination" class="col-sm-2 col-form-label">destination</label>
-                        <div class="col-sm-10">
-                            <input type="text" id="udestination" name="udestination">
+                        <div class="form-group row">
+                            <label for="udestination" class="col-sm-2 col-form-label">destination</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="udestination" name="udestination">
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-group row">
-                        <label for="uimage" class="col-sm-2 col-form-label">image</label>
-                        <div class="col-sm-10">
-                            <input type="file" id="uimage" name="uimage">
+                        <div class="form-group row">
+                            <label for="uimage" class="col-sm-2 col-form-label">image</label>
+                            <div class="col-sm-10">
+                                <input type="file" id="uimage" name="uimage">
+                            </div>
                         </div>
-                    </div>
 
 
-                    <button id="ubtn">click</button>
-                </form>
-                <button id="gettrav">get travelers</button>
+                    </form>
+                    <button id="ubtn" class="btn btn-warning">click</button>
+                    <button id="gettrav" class="btn btn-warning">get travelers</button>
 
-                <table class="table" style="display: none;">
-                    <thead>
-                        <tr id="tab">
-                            <th scope="col">name</th>
-                            <th scope="col">phone</th>
-                            <th scope="col">email</th>
-                            <th scope="col">origin</th>
-                            <th scope="col">destination</th>
+                    <table class="table" style="display: none;">
+                        <thead>
+                            <tr id="tab">
+                                <th scope="col">name</th>
+                                <th scope="col">phone</th>
+                                <th scope="col">email</th>
+                                <th scope="col">origin</th>
+                                <th scope="col">destination</th>
 
-                        </tr>
-                    </thead>
-                    <tbody class="tbody">
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
 
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
 
-    </main>
+        </main>
 
-    <script src="uindex.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+        <script src="uindex.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    </div>
 </body>
 
 </html>

@@ -81,6 +81,7 @@ getusers.addEventListener("click", async (event) => {
             // then the tbody is populated with the row wwe pop above
             tbody.appendChild(row)
             //
+            alert("your sign up was sucessful")
             console.log("work")
         })
     } catch (error) {

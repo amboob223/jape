@@ -29,6 +29,7 @@ ubutton.addEventListener("click", async (event) => {
                 body: body
             })
 
+        alert("your sign up was sucessful")
         uname.value = ""
         uphone.value = ""
         uemail.value = ""

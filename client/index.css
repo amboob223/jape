@@ -74,3 +74,10 @@ footer {
 .nav-link {
     color: black;
 }
+
+.top {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin-left: 50vh;
+}

@@ -8,7 +8,7 @@ const image = document.getElementById("image");
 const button = document.getElementById("btn");
 const tbody = document.querySelector("tbody")
 const getusers = document.getElementById("getusers")
-
+const rarri = document.querySelector("rari")
 //travlerbtn
 button.addEventListener("click", async (event) => {
     try {
@@ -34,6 +34,8 @@ button.addEventListener("click", async (event) => {
         originn.value = ""
         destination.value = ""
 
+        alert("your sign up was sucessful")
+
         console.log("work")
     } catch (error) {
         console.log(error)
@@ -58,6 +60,8 @@ getusers.addEventListener("click", async (event) => {
         info.map((info) => {
             //make the elements
             const row = document.createElement("tr");
+            row.classList.add("rari")
+
             const name = document.createElement("td");
             const phone = document.createElement("td");
             const email = document.createElement("td");
@@ -80,11 +84,22 @@ getusers.addEventListener("click", async (event) => {
 
             // then the tbody is populated with the row wwe pop above
             tbody.appendChild(row)
+            //now the event for when you click it out to erase after you call 
+            //we delete every week out the list for now 
+            row.addEventListener("click", async () => {
+                row.innerHTML = ""
+
+
+            }) // so a nested event was the way
+
             //
-            alert("your sign up was sucessful")
+
             console.log("work")
-        })
+        });
+
     } catch (error) {
         console.log(error)
     }
-})
+});
+
+//delete all

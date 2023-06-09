@@ -9,6 +9,7 @@ const uimage = document.getElementById("uimage");
 const ubutton = document.getElementById("ubtn");
 const gettrav = document.getElementById("gettrav")
 const tbody = document.querySelector(".tbody")
+const rarri = document.querySelector(".rari")
 
 ubutton.addEventListener("click", async (event) => {
     try {
@@ -63,7 +64,7 @@ gettrav.addEventListener("click", async (event) => {
         info.map((info) => {
             //make the elements
             const row = document.createElement("tr");
-
+            row.classList.add("rari")
             const name = document.createElement("td");
             const phone = document.createElement("td");
             const email = document.createElement("td");
@@ -87,6 +88,13 @@ gettrav.addEventListener("click", async (event) => {
             // then the tbody is populated with the row wwe pop above
             tbody.appendChild(row)
             //
+
+            row.addEventListener("click", async () => {
+                row.innerHTML = ""
+
+
+            }) // so a nested event was the way
+
             console.log("work")
         })
     } catch (error) {
@@ -94,5 +102,17 @@ gettrav.addEventListener("click", async (event) => {
     }
 })
 
+//now we want  when you click the tr its lika a link that takes you to an greement page when that we generate a random code and the user gives it to the tukicat and if they input the code the user gives there name is deleted 
+// for this to happen they would have had to speak and agree. 
 
+// const rows = document.querySelectorAll("tbody tr")
+
+
+// rows.forEach((row) => {
+//     row.addEventListener("click", () => {
+//         console.log("work")
+//     })
+
+// })
+// delete row by adding class
 

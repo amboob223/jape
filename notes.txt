@@ -11,3 +11,11 @@ we got to give each form its own js file we got to sepereat et them '
     - go to legitmation 
         - waitin on the email
 
+        2keycat
+            - now when someone clicks for one of the things on the list we go to a new page and it
+             goes to another page that lets them know we are awaiting confimation from the person they selected if theat 
+             -so it some page that generates for every combinatiion of user and traveler when the two have contacted and arragned the deatails both of them agree and there names are taken out of the database 
+
+
+only other thin it needs to erase and we got to make the date 
+    -we got to make the delete for all automatic

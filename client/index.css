@@ -4,6 +4,17 @@
     margin-top: 5%;
 }
 
+.picj {
+    justify-content: space-between;
+    display: flex;
+}
+
+
+
+.wolf {
+    text-align: center;
+}
+
 h1 {
     text-align: center;
 }
@@ -29,14 +40,26 @@ form {
 
 header {
     margin: 30px;
-    margin-top: 50px;
 
+
+    height: 70px;
     background-color: cadetblue;
+}
+
+.other {
+    background-color: white;
+    display: flex;
+}
+
+.try {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .w {
     background-color: azure;
-    height: 700px;
+
 }
 
 main {

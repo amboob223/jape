@@ -9,8 +9,6 @@
     display: flex;
 }
 
-
-
 .wolf {
     text-align: center;
 }
@@ -68,6 +66,8 @@ main {
 }
 
 footer {
+    display: flex;
+    text-align: center;
     background-color: cadetblue;
 }
 

@@ -24,7 +24,7 @@ ubutton.addEventListener("click", async (event) => {
         body.append("udestination", udestinaton.value)
         body.append("uimage", uimage.files[0])//the files . zero is from formdata is gives us an arry of the file elements in the form and [0[ is yhe first one]]
 
-        const response = await fetch("http://localhost:5000/users",
+        const response = await fetch("https://twokeycat.onrender.com/users",
             {
                 method: "POST",
                 body: body
@@ -57,7 +57,7 @@ gettrav.addEventListener("click", async (event) => {
         //this pops up the column infor when the button is clicked 
 
 
-        const data = await fetch("http://localhost:5000/travelers");
+        const data = await fetch("https://twokeycat.onrender.com/travelers");
         const par = await data.json(); // this give us a json object but we got to dod the 
         const info = par.rows
 

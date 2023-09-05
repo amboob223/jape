@@ -28,6 +28,7 @@ app.get("/", (req, res) => {
 })
 
 
+
 app.post("/travelers", upload.single("image"), async (req, res) => {
     try {
         const { name, phone, email, origin, destination } = req.body

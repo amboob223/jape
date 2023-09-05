@@ -22,7 +22,7 @@ button.addEventListener("click", async (event) => {
         body.append("destination", destination.value)
         body.append("image", image.files[0])//the files . zero is from formdata is gives us an arry of the file elements in the form and [0[ is yhe first one]]
 
-        const response = await fetch("http://localhost:5000/travelers", {
+        const response = await fetch("https://twokeycat.onrender.com/travelers", {
             method: "POST",
             body: body
         })
@@ -53,7 +53,7 @@ getusers.addEventListener("click", async (event) => {
         table.style.display = "table-row-group" // style and display node 
 
         tbody.innerHTML = ""
-        const data = await fetch("http://localhost:5000/users");
+        const data = await fetch("https://twokeycat.onrender.com/users");
         const par = await data.json(); // this give us a json object but we got to dod the 
         const info = par.rows
 

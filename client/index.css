@@ -81,3 +81,8 @@ footer {
     align-items: center;
     margin-left: 30%;
 }
+
+.outc {
+    display: flex;
+    justify-content: space-between;
+}

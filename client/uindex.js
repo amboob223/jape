@@ -102,6 +102,36 @@ gettrav.addEventListener("click", async (event) => {
     }
 })
 
+gettrav.addEventListener("click", async (event) => {
+    try {
+        event.preventDefault();
+        const table = document.querySelector("table");
+        table.style.display = "table-row-group";
+        // Wipe up the row
+        tbody.innerHTML = "";
+
+        // Show the loading symbol
+        const loading = document.getElementById("loading");
+        loading.style.display = "block";
+
+        const data = await fetch("https://twokeycat.onrender.com/travelers");
+        const par = await data.json();
+        const info = par.rows;
+
+        info.map((info) => {
+            // ... Your existing code to populate the table ...
+
+            console.log("work");
+        });
+
+        // Hide the loading symbol after data is loaded
+        loading.style.display = "none";
+    } catch (error) {
+        console.log(error);
+    }
+});
+
+
 //now we want  when you click the tr its lika a link that takes you to an greement page when that we generate a random code and the user gives it to the tukicat and if they input the code the user gives there name is deleted 
 // for this to happen they would have had to speak and agree. 
 

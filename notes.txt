@@ -56,8 +56,8 @@ only other thin it needs to erase and we got to make the date
         -2key cat -f 
         -joner -f 
         -perfect pitch -f
-        -fatherhood app -s
-        -numerology app -s 
+        -fatherhood app -f
+        -numerology app -s
 
             Abdul mboob.com 
 
